@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2d561d75c238eaad24dfc6d0bd2e8e38 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <h3 align="center" style="font-size:16px">
+        Estacoes brasileiras de radiossonda operacionais (2026)
+    </h3>
+    
+    
+            <div class="folium-map" id="map_2d561d75c238eaad24dfc6d0bd2e8e38" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2d561d75c238eaad24dfc6d0bd2e8e38 = L.map(
+                "map_2d561d75c238eaad24dfc6d0bd2e8e38",
+                {
+                    center: [-12.528846428571429, -54.04524285714285],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ace6f832a169b19235d730af55cf84d8 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ace6f832a169b19235d730af55cf84d8.addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+            var circle_marker_48961534ce03c6bd5a5a692387aa6135 = L.circleMarker(
+                [-9.8667, -56.1],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_bc6e1b463e742f1700fe0feee373dc6a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_427bcdb5995cfc84fa64eaef4645efdd = $(`<div id="html_427bcdb5995cfc84fa64eaef4645efdd" style="width: 100.0%; height: 100.0%;">         <b>ALTA FLORESTA (AERO)</b><br>         ID: BRM00082965<br>         Lat/Lon: -9.8667, -56.1000<br>         Elevacao: 288.0 m<br>         Periodo: 1987 - 2026<br>         Observacoes: 13489         </div>`)[0];
+                popup_bc6e1b463e742f1700fe0feee373dc6a.setContent(html_427bcdb5995cfc84fa64eaef4645efdd);
+            
+        
+
+        circle_marker_48961534ce03c6bd5a5a692387aa6135.bindPopup(popup_bc6e1b463e742f1700fe0feee373dc6a)
+        ;
+
+        
+    
+    
+            circle_marker_48961534ce03c6bd5a5a692387aa6135.bindTooltip(
+                `<div>
+                     ALTA FLORESTA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b90a49197cb5e6a4e7712847009bf99 = L.circleMarker(
+                [-1.3833, -48.4833],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_1cfc76ca02062bc4abb5d875e46dc33c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b2ebe57631fe98b107d922ee919b12b = $(`<div id="html_0b2ebe57631fe98b107d922ee919b12b" style="width: 100.0%; height: 100.0%;">         <b>BELEM (AERO)</b><br>         ID: BRM00082193<br>         Lat/Lon: -1.3833, -48.4833<br>         Elevacao: 16.0 m<br>         Periodo: 1943 - 2026<br>         Observacoes: 25940         </div>`)[0];
+                popup_1cfc76ca02062bc4abb5d875e46dc33c.setContent(html_0b2ebe57631fe98b107d922ee919b12b);
+            
+        
+
+        circle_marker_8b90a49197cb5e6a4e7712847009bf99.bindPopup(popup_1cfc76ca02062bc4abb5d875e46dc33c)
+        ;
+
+        
+    
+    
+            circle_marker_8b90a49197cb5e6a4e7712847009bf99.bindTooltip(
+                `<div>
+                     BELEM (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e755059fd58b746885bea1e4fd42fb11 = L.circleMarker(
+                [2.849, -60.6943],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_f0debdcd82a0a294526d88a7cdbc2fbb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0cfce97e931132600000d6a30a9dc6ea = $(`<div id="html_0cfce97e931132600000d6a30a9dc6ea" style="width: 100.0%; height: 100.0%;">         <b>BOA VISTA (AERO)</b><br>         ID: BRM00082022<br>         Lat/Lon: 2.8490, -60.6943<br>         Elevacao: 83.5 m<br>         Periodo: 1977 - 2026<br>         Observacoes: 11789         </div>`)[0];
+                popup_f0debdcd82a0a294526d88a7cdbc2fbb.setContent(html_0cfce97e931132600000d6a30a9dc6ea);
+            
+        
+
+        circle_marker_e755059fd58b746885bea1e4fd42fb11.bindPopup(popup_f0debdcd82a0a294526d88a7cdbc2fbb)
+        ;
+
+        
+    
+    
+            circle_marker_e755059fd58b746885bea1e4fd42fb11.bindTooltip(
+                `<div>
+                     BOA VISTA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73fac28a11720b3d77d760937fc2483a = L.circleMarker(
+                [-15.8729, -47.9241],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_5db15931d2c0c24a501648350a554682 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2bd66a515cfba9aff23146405478cf46 = $(`<div id="html_2bd66a515cfba9aff23146405478cf46" style="width: 100.0%; height: 100.0%;">         <b>BRASILIA (AERO)</b><br>         ID: BRM00083378<br>         Lat/Lon: -15.8729, -47.9241<br>         Elevacao: 1061.0 m<br>         Periodo: 1966 - 2026<br>         Observacoes: 30809         </div>`)[0];
+                popup_5db15931d2c0c24a501648350a554682.setContent(html_2bd66a515cfba9aff23146405478cf46);
+            
+        
+
+        circle_marker_73fac28a11720b3d77d760937fc2483a.bindPopup(popup_5db15931d2c0c24a501648350a554682)
+        ;
+
+        
+    
+    
+            circle_marker_73fac28a11720b3d77d760937fc2483a.bindTooltip(
+                `<div>
+                     BRASILIA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_59688dd6bb9827543f2a3fac941845ba = L.circleMarker(
+                [-20.4667, -54.6667],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_58fa3f4637bdb705cd390039cb4cbceb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e7f881a9aa8d246d2d8b1b67d6a90ce0 = $(`<div id="html_e7f881a9aa8d246d2d8b1b67d6a90ce0" style="width: 100.0%; height: 100.0%;">         <b>CAMPO GRANDE (AERO)</b><br>         ID: BRM00083612<br>         Lat/Lon: -20.4667, -54.6667<br>         Elevacao: 567.0 m<br>         Periodo: 1966 - 2026<br>         Observacoes: 28336         </div>`)[0];
+                popup_58fa3f4637bdb705cd390039cb4cbceb.setContent(html_e7f881a9aa8d246d2d8b1b67d6a90ce0);
+            
+        
+
+        circle_marker_59688dd6bb9827543f2a3fac941845ba.bindPopup(popup_58fa3f4637bdb705cd390039cb4cbceb)
+        ;
+
+        
+    
+    
+            circle_marker_59688dd6bb9827543f2a3fac941845ba.bindTooltip(
+                `<div>
+                     CAMPO GRANDE (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3a137ff042a52a1ed27a2d978e120893 = L.circleMarker(
+                [-19.6167, -43.9667],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_9eeab255f8880ed8b10b59cbf4f15803 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a2e90684e437cf715c668be51c557f06 = $(`<div id="html_a2e90684e437cf715c668be51c557f06" style="width: 100.0%; height: 100.0%;">         <b>CONFINS (AERO)</b><br>         ID: BRM00083566<br>         Lat/Lon: -19.6167, -43.9667<br>         Elevacao: 827.0 m<br>         Periodo: 1973 - 2026<br>         Observacoes: 15410         </div>`)[0];
+                popup_9eeab255f8880ed8b10b59cbf4f15803.setContent(html_a2e90684e437cf715c668be51c557f06);
+            
+        
+
+        circle_marker_3a137ff042a52a1ed27a2d978e120893.bindPopup(popup_9eeab255f8880ed8b10b59cbf4f15803)
+        ;
+
+        
+    
+    
+            circle_marker_3a137ff042a52a1ed27a2d978e120893.bindTooltip(
+                `<div>
+                     CONFINS (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80ede5ae5e1a6d02cae4c98b81536f42 = L.circleMarker(
+                [-7.5833, -72.7667],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_56d231fb8c918a02a81127301a337ab1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bf4fe3345edc4a2d01eeeaec3791e564 = $(`<div id="html_bf4fe3345edc4a2d01eeeaec3791e564" style="width: 100.0%; height: 100.0%;">         <b>CRUZEIRO DO SUL (AERO)</b><br>         ID: BRM00082705<br>         Lat/Lon: -7.5833, -72.7667<br>         Elevacao: 199.0 m<br>         Periodo: 2004 - 2026<br>         Observacoes: 9918         </div>`)[0];
+                popup_56d231fb8c918a02a81127301a337ab1.setContent(html_bf4fe3345edc4a2d01eeeaec3791e564);
+            
+        
+
+        circle_marker_80ede5ae5e1a6d02cae4c98b81536f42.bindPopup(popup_56d231fb8c918a02a81127301a337ab1)
+        ;
+
+        
+    
+    
+            circle_marker_80ede5ae5e1a6d02cae4c98b81536f42.bindTooltip(
+                `<div>
+                     CRUZEIRO DO SUL (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b03225ada343f5ab707ae55daa4871d5 = L.circleMarker(
+                [-25.5167, -49.1667],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_cffdb226e8c87d6cdd68ef992dcef88d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c567db63974878a210760fe0c58c9649 = $(`<div id="html_c567db63974878a210760fe0c58c9649" style="width: 100.0%; height: 100.0%;">         <b>CURITIBA (AERO)</b><br>         ID: BRM00083840<br>         Lat/Lon: -25.5167, -49.1667<br>         Elevacao: 908.0 m<br>         Periodo: 1965 - 2026<br>         Observacoes: 30163         </div>`)[0];
+                popup_cffdb226e8c87d6cdd68ef992dcef88d.setContent(html_c567db63974878a210760fe0c58c9649);
+            
+        
+
+        circle_marker_b03225ada343f5ab707ae55daa4871d5.bindPopup(popup_cffdb226e8c87d6cdd68ef992dcef88d)
+        ;
+
+        
+    
+    
+            circle_marker_b03225ada343f5ab707ae55daa4871d5.bindTooltip(
+                `<div>
+                     CURITIBA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3e177f972042bf4032aa0d6e50124fd = L.circleMarker(
+                [-3.85, -32.4167],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_21fbf7f0cd884b0aca4bb00afa7664f8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_43c0ddb91ea38d813eff19c35787f044 = $(`<div id="html_43c0ddb91ea38d813eff19c35787f044" style="width: 100.0%; height: 100.0%;">         <b>FERNANDO DE NORONHA (AERO)</b><br>         ID: BRM00082400<br>         Lat/Lon: -3.8500, -32.4167<br>         Elevacao: 56.0 m<br>         Periodo: 1958 - 2026<br>         Observacoes: 15016         </div>`)[0];
+                popup_21fbf7f0cd884b0aca4bb00afa7664f8.setContent(html_43c0ddb91ea38d813eff19c35787f044);
+            
+        
+
+        circle_marker_d3e177f972042bf4032aa0d6e50124fd.bindPopup(popup_21fbf7f0cd884b0aca4bb00afa7664f8)
+        ;
+
+        
+    
+    
+            circle_marker_d3e177f972042bf4032aa0d6e50124fd.bindTooltip(
+                `<div>
+                     FERNANDO DE NORONHA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07fe72236b0a19d8c9eab9e6971990b5 = L.circleMarker(
+                [-27.6667, -48.55],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_1fd805e4aba5dcea3f56457c3197d6e0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_da34b91d16714896aed2fd7b91f77fe5 = $(`<div id="html_da34b91d16714896aed2fd7b91f77fe5" style="width: 100.0%; height: 100.0%;">         <b>FLORIANOPOLIS (AERO)</b><br>         ID: BRM00083899<br>         Lat/Lon: -27.6667, -48.5500<br>         Elevacao: 5.0 m<br>         Periodo: 1973 - 2026<br>         Observacoes: 15022         </div>`)[0];
+                popup_1fd805e4aba5dcea3f56457c3197d6e0.setContent(html_da34b91d16714896aed2fd7b91f77fe5);
+            
+        
+
+        circle_marker_07fe72236b0a19d8c9eab9e6971990b5.bindPopup(popup_1fd805e4aba5dcea3f56457c3197d6e0)
+        ;
+
+        
+    
+    
+            circle_marker_07fe72236b0a19d8c9eab9e6971990b5.bindTooltip(
+                `<div>
+                     FLORIANOPOLIS (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c4b674752a485199256d08138283fe49 = L.circleMarker(
+                [-25.6003, -54.485],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_66ddfa5e23cef7d96c08eee62660fedc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8535640871b0d44f9afdd8c3daf87b47 = $(`<div id="html_8535640871b0d44f9afdd8c3daf87b47" style="width: 100.0%; height: 100.0%;">         <b>FOZ DO IGUACU (AERO)</b><br>         ID: BRM00083827<br>         Lat/Lon: -25.6003, -54.4850<br>         Elevacao: 239.0 m<br>         Periodo: 1974 - 2026<br>         Observacoes: 16510         </div>`)[0];
+                popup_66ddfa5e23cef7d96c08eee62660fedc.setContent(html_8535640871b0d44f9afdd8c3daf87b47);
+            
+        
+
+        circle_marker_c4b674752a485199256d08138283fe49.bindPopup(popup_66ddfa5e23cef7d96c08eee62660fedc)
+        ;
+
+        
+    
+    
+            circle_marker_c4b674752a485199256d08138283fe49.bindTooltip(
+                `<div>
+                     FOZ DO IGUACU (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ed17c4f52c43647079224e9d833fbfe = L.circleMarker(
+                [-23.3333, -51.1333],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_a1e795dd22294bdca7dd2f21a5ad8a99 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d115c2f2e1c8ae9431743d839a00f6ec = $(`<div id="html_d115c2f2e1c8ae9431743d839a00f6ec" style="width: 100.0%; height: 100.0%;">         <b>LONDRINA (AERO)</b><br>         ID: BRM00083768<br>         Lat/Lon: -23.3333, -51.1333<br>         Elevacao: 569.0 m<br>         Periodo: 1973 - 2026<br>         Observacoes: 10262         </div>`)[0];
+                popup_a1e795dd22294bdca7dd2f21a5ad8a99.setContent(html_d115c2f2e1c8ae9431743d839a00f6ec);
+            
+        
+
+        circle_marker_4ed17c4f52c43647079224e9d833fbfe.bindPopup(popup_a1e795dd22294bdca7dd2f21a5ad8a99)
+        ;
+
+        
+    
+    
+            circle_marker_4ed17c4f52c43647079224e9d833fbfe.bindTooltip(
+                `<div>
+                     LONDRINA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_782cd3bcde1c939d6588564ca0c9a082 = L.circleMarker(
+                [0.05, -51.0667],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_c891d9176422b158cc8fb912cb2cf923 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b134a71d47bedce03408c29868501ddc = $(`<div id="html_b134a71d47bedce03408c29868501ddc" style="width: 100.0%; height: 100.0%;">         <b>MACAPA (AERO)</b><br>         ID: BRM00082099<br>         Lat/Lon: 0.0500, -51.0667<br>         Elevacao: 16.0 m<br>         Periodo: 2005 - 2026<br>         Observacoes: 9468         </div>`)[0];
+                popup_c891d9176422b158cc8fb912cb2cf923.setContent(html_b134a71d47bedce03408c29868501ddc);
+            
+        
+
+        circle_marker_782cd3bcde1c939d6588564ca0c9a082.bindPopup(popup_c891d9176422b158cc8fb912cb2cf923)
+        ;
+
+        
+    
+    
+            circle_marker_782cd3bcde1c939d6588564ca0c9a082.bindTooltip(
+                `<div>
+                     MACAPA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e643fa28ba602fec4aaa205c32f357cc = L.circleMarker(
+                [-3.15, -59.9833],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_bf9b77163a06fba881e288393b906419 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bd810cab36e71c6fb05ad3353426e422 = $(`<div id="html_bd810cab36e71c6fb05ad3353426e422" style="width: 100.0%; height: 100.0%;">         <b>MANAUS (AERO)</b><br>         ID: BRM00082332<br>         Lat/Lon: -3.1500, -59.9833<br>         Elevacao: 84.0 m<br>         Periodo: 1967 - 2026<br>         Observacoes: 25228         </div>`)[0];
+                popup_bf9b77163a06fba881e288393b906419.setContent(html_bd810cab36e71c6fb05ad3353426e422);
+            
+        
+
+        circle_marker_e643fa28ba602fec4aaa205c32f357cc.bindPopup(popup_bf9b77163a06fba881e288393b906419)
+        ;
+
+        
+    
+    
+            circle_marker_e643fa28ba602fec4aaa205c32f357cc.bindTooltip(
+                `<div>
+                     MANAUS (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6dbb97d7c31127795ff241078f65ccd8 = L.circleMarker(
+                [-5.8167, -61.2833],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_a6b99d6da82859a27357309761654008 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c202b5ac6fab8828f60716f7492345c4 = $(`<div id="html_c202b5ac6fab8828f60716f7492345c4" style="width: 100.0%; height: 100.0%;">         <b>MANICORE (AERO)</b><br>         ID: BRM00082532<br>         Lat/Lon: -5.8167, -61.2833<br>         Elevacao: 53.0 m<br>         Periodo: 2006 - 2026<br>         Observacoes: 9317         </div>`)[0];
+                popup_a6b99d6da82859a27357309761654008.setContent(html_c202b5ac6fab8828f60716f7492345c4);
+            
+        
+
+        circle_marker_6dbb97d7c31127795ff241078f65ccd8.bindPopup(popup_a6b99d6da82859a27357309761654008)
+        ;
+
+        
+    
+    
+            circle_marker_6dbb97d7c31127795ff241078f65ccd8.bindTooltip(
+                `<div>
+                     MANICORE (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e83fdd3275afc12a98d443ddfe19a46 = L.circleMarker(
+                [-23.5, -46.6333],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_f43e3867f7010ba6b33aba16a09b9e1b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc4f1801386f4e00222cc1280cf288e8 = $(`<div id="html_bc4f1801386f4e00222cc1280cf288e8" style="width: 100.0%; height: 100.0%;">         <b>MARTE (AERO)</b><br>         ID: BRM00083779<br>         Lat/Lon: -23.5000, -46.6333<br>         Elevacao: 722.0 m<br>         Periodo: 2000 - 2026<br>         Observacoes: 16344         </div>`)[0];
+                popup_f43e3867f7010ba6b33aba16a09b9e1b.setContent(html_bc4f1801386f4e00222cc1280cf288e8);
+            
+        
+
+        circle_marker_2e83fdd3275afc12a98d443ddfe19a46.bindPopup(popup_f43e3867f7010ba6b33aba16a09b9e1b)
+        ;
+
+        
+    
+    
+            circle_marker_2e83fdd3275afc12a98d443ddfe19a46.bindTooltip(
+                `<div>
+                     MARTE (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cb46509e46862e61f11468f7054dc88 = L.circleMarker(
+                [-5.9167, -35.25],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_5e9ab0c1903289cebb8380f4234e9003 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_877b7898125ec994c973496514a8f5dc = $(`<div id="html_877b7898125ec994c973496514a8f5dc" style="width: 100.0%; height: 100.0%;">         <b>NATAL (AERO)</b><br>         ID: BRM00082599<br>         Lat/Lon: -5.9167, -35.2500<br>         Elevacao: 52.0 m<br>         Periodo: 1943 - 2026<br>         Observacoes: 20272         </div>`)[0];
+                popup_5e9ab0c1903289cebb8380f4234e9003.setContent(html_877b7898125ec994c973496514a8f5dc);
+            
+        
+
+        circle_marker_1cb46509e46862e61f11468f7054dc88.bindPopup(popup_5e9ab0c1903289cebb8380f4234e9003)
+        ;
+
+        
+    
+    
+            circle_marker_1cb46509e46862e61f11468f7054dc88.bindTooltip(
+                `<div>
+                     NATAL (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_345f7b4934923b69605a55873e898bb5 = L.circleMarker(
+                [-8.7667, -63.9167],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_481ae9a8b96c8853714a74d14a3f2389 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6bfa5b7d20d48b71c9753c66d0468f35 = $(`<div id="html_6bfa5b7d20d48b71c9753c66d0468f35" style="width: 100.0%; height: 100.0%;">         <b>PORTO VELHO (AERO)</b><br>         ID: BRM00082824<br>         Lat/Lon: -8.7667, -63.9167<br>         Elevacao: 102.0 m<br>         Periodo: 1977 - 2026<br>         Observacoes: 14393         </div>`)[0];
+                popup_481ae9a8b96c8853714a74d14a3f2389.setContent(html_6bfa5b7d20d48b71c9753c66d0468f35);
+            
+        
+
+        circle_marker_345f7b4934923b69605a55873e898bb5.bindPopup(popup_481ae9a8b96c8853714a74d14a3f2389)
+        ;
+
+        
+    
+    
+            circle_marker_345f7b4934923b69605a55873e898bb5.bindTooltip(
+                `<div>
+                     PORTO VELHO (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_388c4bd3d5e21e8ba9cf8197a002037f = L.circleMarker(
+                [-9.87, -67.9],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_e3cc3b520922f2fe2a14a211c755626d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f6c44af907cb8239907c7edc76795c2a = $(`<div id="html_f6c44af907cb8239907c7edc76795c2a" style="width: 100.0%; height: 100.0%;">         <b>RIO BRANCO (AERO)</b><br>         ID: BRM00082917<br>         Lat/Lon: -9.8700, -67.9000<br>         Elevacao: 193.0 m<br>         Periodo: 2004 - 2026<br>         Observacoes: 9373         </div>`)[0];
+                popup_e3cc3b520922f2fe2a14a211c755626d.setContent(html_f6c44af907cb8239907c7edc76795c2a);
+            
+        
+
+        circle_marker_388c4bd3d5e21e8ba9cf8197a002037f.bindPopup(popup_e3cc3b520922f2fe2a14a211c755626d)
+        ;
+
+        
+    
+    
+            circle_marker_388c4bd3d5e21e8ba9cf8197a002037f.bindTooltip(
+                `<div>
+                     RIO BRANCO (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c19b39cd596984d069a495bacd03235 = L.circleMarker(
+                [-29.7167, -53.7],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_5750560770d04faa586603dc0a878108 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_86b8ac14118236c37eaac6eee4079b36 = $(`<div id="html_86b8ac14118236c37eaac6eee4079b36" style="width: 100.0%; height: 100.0%;">         <b>SANTA MARIA (AERO)</b><br>         ID: BRM00083937<br>         Lat/Lon: -29.7167, -53.7000<br>         Elevacao: 85.0 m<br>         Periodo: 2006 - 2026<br>         Observacoes: 12966         </div>`)[0];
+                popup_5750560770d04faa586603dc0a878108.setContent(html_86b8ac14118236c37eaac6eee4079b36);
+            
+        
+
+        circle_marker_3c19b39cd596984d069a495bacd03235.bindPopup(popup_5750560770d04faa586603dc0a878108)
+        ;
+
+        
+    
+    
+            circle_marker_3c19b39cd596984d069a495bacd03235.bindTooltip(
+                `<div>
+                     SANTA MARIA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_158bdada8c4c5a003b4f952fe7a8ca02 = L.circleMarker(
+                [-2.4333, -54.7167],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_9980446614482e04eb286f0071488182 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_51065783e54b58ebfaf42511d23de109 = $(`<div id="html_51065783e54b58ebfaf42511d23de109" style="width: 100.0%; height: 100.0%;">         <b>SANTAREM (AERO)</b><br>         ID: BRM00082244<br>         Lat/Lon: -2.4333, -54.7167<br>         Elevacao: 72.0 m<br>         Periodo: 1973 - 2026<br>         Observacoes: 10002         </div>`)[0];
+                popup_9980446614482e04eb286f0071488182.setContent(html_51065783e54b58ebfaf42511d23de109);
+            
+        
+
+        circle_marker_158bdada8c4c5a003b4f952fe7a8ca02.bindPopup(popup_9980446614482e04eb286f0071488182)
+        ;
+
+        
+    
+    
+            circle_marker_158bdada8c4c5a003b4f952fe7a8ca02.bindTooltip(
+                `<div>
+                     SANTAREM (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_713f74a939b9c30cd34000c50ce5c6e1 = L.circleMarker(
+                [-0.1167, -66.9667],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_ee1d161fc754a74488f76c6f01df5bf3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38403a0c92829270572e646b05c73b88 = $(`<div id="html_38403a0c92829270572e646b05c73b88" style="width: 100.0%; height: 100.0%;">         <b>SAO GABRIEL DA CACHOEIRA</b><br>         ID: BRM00082107<br>         Lat/Lon: -0.1167, -66.9667<br>         Elevacao: 79.0 m<br>         Periodo: 2008 - 2026<br>         Observacoes: 6549         </div>`)[0];
+                popup_ee1d161fc754a74488f76c6f01df5bf3.setContent(html_38403a0c92829270572e646b05c73b88);
+            
+        
+
+        circle_marker_713f74a939b9c30cd34000c50ce5c6e1.bindPopup(popup_ee1d161fc754a74488f76c6f01df5bf3)
+        ;
+
+        
+    
+    
+            circle_marker_713f74a939b9c30cd34000c50ce5c6e1.bindTooltip(
+                `<div>
+                     SAO GABRIEL DA CACHOEIRA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d830247a21615b13a03b9bdb1cabce5 = L.circleMarker(
+                [-4.25, -69.9333],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_9cff45e4c02cdb173c2d18e533a4e4ce = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b614b47f47a3e4cf8bd1af7675079fbe = $(`<div id="html_b614b47f47a3e4cf8bd1af7675079fbe" style="width: 100.0%; height: 100.0%;">         <b>TABATINGA (AERO)</b><br>         ID: BRM00082411<br>         Lat/Lon: -4.2500, -69.9333<br>         Elevacao: 81.0 m<br>         Periodo: 2006 - 2026<br>         Observacoes: 8597         </div>`)[0];
+                popup_9cff45e4c02cdb173c2d18e533a4e4ce.setContent(html_b614b47f47a3e4cf8bd1af7675079fbe);
+            
+        
+
+        circle_marker_1d830247a21615b13a03b9bdb1cabce5.bindPopup(popup_9cff45e4c02cdb173c2d18e533a4e4ce)
+        ;
+
+        
+    
+    
+            circle_marker_1d830247a21615b13a03b9bdb1cabce5.bindTooltip(
+                `<div>
+                     TABATINGA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_976c1c8f59f1ecba10630811bdf547b6 = L.circleMarker(
+                [2.22, -55.93],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_929d81edbe22cb42fbce534399656123 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b7e6796bcb3d3eed1a184a69fa5c0b88 = $(`<div id="html_b7e6796bcb3d3eed1a184a69fa5c0b88" style="width: 100.0%; height: 100.0%;">         <b>TIRIOS (AERO)</b><br>         ID: BRM00082026<br>         Lat/Lon: 2.2200, -55.9300<br>         Elevacao: 325.0 m<br>         Periodo: 2006 - 2026<br>         Observacoes: 9625         </div>`)[0];
+                popup_929d81edbe22cb42fbce534399656123.setContent(html_b7e6796bcb3d3eed1a184a69fa5c0b88);
+            
+        
+
+        circle_marker_976c1c8f59f1ecba10630811bdf547b6.bindPopup(popup_929d81edbe22cb42fbce534399656123)
+        ;
+
+        
+    
+    
+            circle_marker_976c1c8f59f1ecba10630811bdf547b6.bindTooltip(
+                `<div>
+                     TIRIOS (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96842953a8695991ade4ec48b9ff9af9 = L.circleMarker(
+                [-18.8833, -48.2167],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_c842dcc00970efb404173b233d314a0f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e04517bc007bd5c8640cb59a9a4d9cb8 = $(`<div id="html_e04517bc007bd5c8640cb59a9a4d9cb8" style="width: 100.0%; height: 100.0%;">         <b>UBERLANDIA (AERO)</b><br>         ID: BRM00083525<br>         Lat/Lon: -18.8833, -48.2167<br>         Elevacao: 943.0 m<br>         Periodo: 2006 - 2026<br>         Observacoes: 9250         </div>`)[0];
+                popup_c842dcc00970efb404173b233d314a0f.setContent(html_e04517bc007bd5c8640cb59a9a4d9cb8);
+            
+        
+
+        circle_marker_96842953a8695991ade4ec48b9ff9af9.bindPopup(popup_c842dcc00970efb404173b233d314a0f)
+        ;
+
+        
+    
+    
+            circle_marker_96842953a8695991ade4ec48b9ff9af9.bindTooltip(
+                `<div>
+                     UBERLANDIA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9718526f627b4ed70872f79e6122660 = L.circleMarker(
+                [-29.7833, -57.0333],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_baac078c6e81d984bad9517e4b14a01b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ff6bfade74aebc23f1506247a403ee1 = $(`<div id="html_8ff6bfade74aebc23f1506247a403ee1" style="width: 100.0%; height: 100.0%;">         <b>URUGUAIANA (AERO)</b><br>         ID: BRM00083928<br>         Lat/Lon: -29.7833, -57.0333<br>         Elevacao: 74.0 m<br>         Periodo: 1973 - 2026<br>         Observacoes: 11652         </div>`)[0];
+                popup_baac078c6e81d984bad9517e4b14a01b.setContent(html_8ff6bfade74aebc23f1506247a403ee1);
+            
+        
+
+        circle_marker_d9718526f627b4ed70872f79e6122660.bindPopup(popup_baac078c6e81d984bad9517e4b14a01b)
+        ;
+
+        
+    
+    
+            circle_marker_d9718526f627b4ed70872f79e6122660.bindTooltip(
+                `<div>
+                     URUGUAIANA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7cef8b41ce187dfce0ea1f7461a19d8a = L.circleMarker(
+                [-12.7, -60.1],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_fae184c1d64d0aef1ef66368545630db = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2d03ad72dacf9d5fcba84f2e65f5edc7 = $(`<div id="html_2d03ad72dacf9d5fcba84f2e65f5edc7" style="width: 100.0%; height: 100.0%;">         <b>VILHENA (AERO)</b><br>         ID: BRM00083208<br>         Lat/Lon: -12.7000, -60.1000<br>         Elevacao: 612.0 m<br>         Periodo: 1967 - 2026<br>         Observacoes: 18503         </div>`)[0];
+                popup_fae184c1d64d0aef1ef66368545630db.setContent(html_2d03ad72dacf9d5fcba84f2e65f5edc7);
+            
+        
+
+        circle_marker_7cef8b41ce187dfce0ea1f7461a19d8a.bindPopup(popup_fae184c1d64d0aef1ef66368545630db)
+        ;
+
+        
+    
+    
+            circle_marker_7cef8b41ce187dfce0ea1f7461a19d8a.bindTooltip(
+                `<div>
+                     VILHENA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b38160329128c62c73175300facf878 = L.circleMarker(
+                [-20.2667, -40.2833],
+                {"bubblingMouseEvents": true, "color": "#b22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_2d561d75c238eaad24dfc6d0bd2e8e38);
+        
+    
+        var popup_df2e9b710c86ea26a31bce5fb2d16c18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4ecb3147128c24fba7f15992db563156 = $(`<div id="html_4ecb3147128c24fba7f15992db563156" style="width: 100.0%; height: 100.0%;">         <b>VITORIA (AERO)</b><br>         ID: BRM00083649<br>         Lat/Lon: -20.2667, -40.2833<br>         Elevacao: 4.0 m<br>         Periodo: 1973 - 2026<br>         Observacoes: 9282         </div>`)[0];
+                popup_df2e9b710c86ea26a31bce5fb2d16c18.setContent(html_4ecb3147128c24fba7f15992db563156);
+            
+        
+
+        circle_marker_5b38160329128c62c73175300facf878.bindPopup(popup_df2e9b710c86ea26a31bce5fb2d16c18)
+        ;
+
+        
+    
+    
+            circle_marker_5b38160329128c62c73175300facf878.bindTooltip(
+                `<div>
+                     VITORIA (AERO)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
