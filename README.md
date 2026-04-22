@@ -71,4 +71,4 @@ Abra o arquivo [index.html](https://arthurwduart.github.io/radiosonde/) diretame
 
 ## Fonte dos dados
 
-Os dados de estações utilizados aqui derivam da lista do **IGRA v2 (Integrated Global Radiosonde Archive)**, amplamente utilizada em estudos atmosféricos e climatológicos.
+Os dados de estações utilizados aqui derivam da lista do **IGRA v2 (Integrated Global Radiosonde Archive)** (https://www.ncei.noaa.gov/data/integrated-global-radiosonde-archive/doc/igra2-station-list.txt), amplamente utilizada em estudos atmosféricos e climatológicos.
