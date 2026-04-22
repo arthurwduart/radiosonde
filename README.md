@@ -41,7 +41,7 @@ As colunas principais dos arquivos CSV são:
 
 ## Mapa das estações de radiossondagem no Brasil
 
-O arquivo [index.html](/home/aw/github/radiosonde/index.html) contém um mapa interativo gerado com Leaflet/Folium. Nele, cada marcador representa uma estação operacional de radiossondagem no Brasil.
+O arquivo [index.html](https://github.com/arthurwduart/radiosonde) contém um mapa interativo gerado com Leaflet/Folium. Nele, cada marcador representa uma estação operacional de radiossondagem no Brasil.
 
 No mapa é possível visualizar:
 
@@ -67,38 +67,7 @@ Algumas estações presentes no mapa:
 
 ## Como visualizar o mapa
 
-Abra o arquivo [index.html](/home/aw/github/radiosonde/index.html) diretamente no navegador.
-
-Se preferir servir localmente com Python:
-
-```bash
-python3 -m http.server 8000
-```
-
-Depois acesse:
-
-```text
-http://localhost:8000
-```
-
-## Como gerar a tabela de estações brasileiras
-
-O script [filter_brazil_radiosonde.py](/home/aw/github/radiosonde/filter_brazil_radiosonde.py) lê a lista de estações do IGRA e filtra os registros cujo identificador começa com `BRM`, correspondendo às estações brasileiras usadas neste projeto.
-
-Exemplo de execução:
-
-```bash
-python3 filter_brazil_radiosonde.py
-```
-
-Observação: no estado atual, o script usa caminhos absolutos no `main()`. Para reutilizá-lo em outro ambiente, pode ser necessário ajustar os caminhos de entrada e saída.
-
-## Possíveis usos
-
-- apoio a estudos de meteorologia e climatologia
-- identificação espacial da rede de radiossondagens no Brasil
-- exploração histórica das estações brasileiras do IGRA
-- preparação de dados para análises geográficas e atmosféricas
+Abra o arquivo [index.html](https://github.com/arthurwduart/radiosonde) diretamente no navegador.
 
 ## Fonte dos dados
 
