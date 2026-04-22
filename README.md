@@ -41,7 +41,7 @@ As colunas principais dos arquivos CSV são:
 
 ## Mapa das estações de radiossondagem no Brasil
 
-O arquivo [index.html](https://github.com/arthurwduart/radiosonde) contém um mapa interativo gerado com Leaflet/Folium. Nele, cada marcador representa uma estação operacional de radiossondagem no Brasil.
+O arquivo [index.html](https://arthurwduart.github.io/radiosonde/) contém um mapa interativo gerado com Leaflet/Folium. Nele, cada marcador representa uma estação operacional de radiossondagem no Brasil.
 
 No mapa é possível visualizar:
 
@@ -67,7 +67,7 @@ Algumas estações presentes no mapa:
 
 ## Como visualizar o mapa
 
-Abra o arquivo [index.html](https://github.com/arthurwduart/radiosonde) diretamente no navegador.
+Abra o arquivo [index.html](https://arthurwduart.github.io/radiosonde/) diretamente no navegador.
 
 ## Fonte dos dados
 
